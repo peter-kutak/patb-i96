@@ -22,3 +22,5 @@ That little script will run at boot time, and change the gpio pins on the 40 pin
 `devmem2.py` is a local version of the program to access the cpu registers. Use if you can't download `devmem2` from the Debian/Ubuntu repositories. `devmem2.py` uses Python3 and is very slow, and must be run by root or sudo.
 
 `blink.py` is just an example to show how you might play with the GPIO lines.
+
+The `rdawfmac.ko` file included here contains the change that allows the WiFi MAC address to persist between reboots. This file (kernel module) can be copied into `/lib/modules/3.10.62-rel5.0.2+/kernel/drivers/net/wireless/rdaw80211/rdawlan/` to overwrite the existing file. If you decide to use this version of the module, be sure to create a folder off the root called `/data/misc/wifi/` so the module can store its randomized MAC address.

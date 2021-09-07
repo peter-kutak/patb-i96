@@ -23,4 +23,4 @@ That little script will run at boot time, and change the gpio pins on the 40 pin
 
 `blink.py` is just an example to show how you might play with the GPIO lines.
 
-The `rdawfmac.ko` file included here contains the change that allows the WiFi MAC address to persist between reboots. This file (kernel module) can be copied into `/lib/modules/3.10.62-rel5.0.2+/kernel/drivers/net/wireless/rdaw80211/rdawlan/` to overwrite the existing file. If you decide to use this version of the module, be sure to create a folder off the root called `/data/misc/wifi/` so the module can store its randomized MAC address.
+The `rdawfmac.ko` file included here contains the change that allows the WiFi MAC address to persist between reboots. This file (kernel module) can be copied into `/lib/modules/3.10.62-rel5.0.2+/kernel/drivers/net/wireless/rdaw80211/rdawlan/` to overwrite the existing file. If you decide to use this version of the module, be sure to create a folder off the root called `/data/misc/wifi/` so the module can store its randomized MAC address. **NOTE**: this module is only useable on the 3.10.62-rel5.0.2 kernel.** It works on the OrangePi-2Giot board as well.
